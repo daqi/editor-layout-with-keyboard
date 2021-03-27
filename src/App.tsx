@@ -1,5 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import BScroll from '@better-scroll/core';
+import ScrollBar from '@better-scroll/scroll-bar';
+
 import useVisualViewport from 'src/hooks/useVisualViewport';
 import useClientType from 'src/hooks/useClientType';
 import useSize from 'src/hooks/useSize';
@@ -7,6 +9,8 @@ import BlurPrevent from 'src/components/BlurPrevent';
 import TouchMovePrevent from 'src/components/TouchMovePrevent';
 
 import './App.less';
+
+BScroll.use(ScrollBar);
 
 const App: React.FC<{ content: string }> = ({ content }) => {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
@@ -31,6 +35,7 @@ const App: React.FC<{ content: string }> = ({ content }) => {
     textAreaAutoHeight();
     scrollRef.current = new BScroll(scrollWapperRef.current!, {
       scrollY: true,
+      scrollbar: true,
       click: true,
       tagException: {},
       autoBlur: false,
