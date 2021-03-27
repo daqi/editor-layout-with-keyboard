@@ -1,0 +1,28 @@
+{
+  "editor.rulers": [100],
+  // 此行影响 prettier的 双引号 转 单引号
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "files.associations": {
+    "*.coffe": "coffeescript",
+    "*.ttml": "xml",
+    "*.ttss": "css"
+  }
+}
