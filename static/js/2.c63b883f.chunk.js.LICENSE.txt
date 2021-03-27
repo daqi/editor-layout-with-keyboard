@@ -10,6 +10,12 @@ object-assign
  * Released under the MIT License.
  */
 
+/*!
+ * better-scroll / scroll-bar
+ * (c) 2016-2021 ustbhuangyi
+ * Released under the MIT License.
+ */
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
