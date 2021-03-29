@@ -25,10 +25,14 @@ const App: React.FC<{ content: string }> = ({ content }) => {
   const scrollRef = useRef<BScroll>();
 
   useEffect(() => {
-    document.addEventListener('scroll', () => {
+    const handler = () => {
       if (!document.scrollingElement) return;
       document.scrollingElement.scrollTo({ top: 0 });
-    });
+    };
+    document.addEventListener('scroll', handler);
+    return () => {
+      document.removeEventListener('scroll', handler);
+    };
   }, []);
 
   useEffect(() => {
